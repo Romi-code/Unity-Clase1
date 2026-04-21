@@ -7,12 +7,15 @@ public class LogButtons : MonoBehaviour
     public void ShowLogInfoMessage()
     {
         // Escribe tu código aquí:
+        Debug.Log("Este es un mensaje de información.");
+        
     }
 
     // TAREA 2: Haz que este botón muestre una ADVERTENCIA (triángulo amarillo)
     public void ShowLogWarningMessage()
     {
         // Escribe tu código aquí:
+        Debug.LogWarning("Este es un mensaje de advertencia.");
     }
 
     // TAREA 3: Haz que este botón muestre un ERROR (octágono rojo)
@@ -20,5 +23,7 @@ public class LogButtons : MonoBehaviour
     public void ShowLogErrorMessage()
     {
         // Escribe tu código aquí:
+        Debug.LogError("Este es un mensaje de error.");
     }
+    
 }

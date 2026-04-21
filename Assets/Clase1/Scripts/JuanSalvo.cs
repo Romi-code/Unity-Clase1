@@ -7,6 +7,10 @@ public class JuanSalvo : MonoBehaviour
 
     // Escribe tus variables aquí abajo: Recorda deben poder ser modificadas desde el inspector pero tambien ser privadas.
 
+    [SerializeField] private string nombre = "Romi";
+    [SerializeField] private int edad = 40;
+    [SerializeField] private float altura = 1.65f;
+    
     // ---------------------------------------------------------
     // (NO TOCAR)
     [Header("Referencias UI")]
@@ -20,6 +24,8 @@ public class JuanSalvo : MonoBehaviour
     {
         // Al iniciar, llamamos a la función que muestra los datos
         MostrarDatos();
+        Contestar();
+
     }
 
     public void MostrarDatos()
@@ -30,19 +36,27 @@ public class JuanSalvo : MonoBehaviour
         // _finalMessage = ... (Escribe tu código aquí)
 
         // Mostrar en consola
-        Debug.Log(_finalMessage == null ? "¡Falta construir el mensaje!" : _finalMessage);
+        Debug.Log(_finalMessage =  nombre + " tiene " + edad + " años y " + altura + " metros de altura." );
 
-        // ---------------------------------------------------------
+        // ---------------------------------------------------------    
         // Actualizamos la UI visualmente no hace falta tocar esto
         ActualizarUI();
         // ---------------------------------------------------------
     }
-
+    
     public void Contestar()
     {
         // 3. TAREA: Condicionales - Responder dependiendo algun parametro como nombre,edad o altura.
         //Ejemplo: si altura >= 2 -> "Fua estas para jugar en la NBA".
-
+        if (nombre != "Romi")
+        {
+           _finalMessage = "Hola " + nombre + ", no sos Romi pero igual te saludo!";
+        }
+        else
+        {
+            _finalMessage = "Romi, un gusto saludarte!";
+        }
+        Debug.Log(_finalMessage);
         // _finalMessage = ... (Escribe tu código aquí)
 
         // ---------------------------------------------------------
