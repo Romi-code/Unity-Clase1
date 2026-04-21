@@ -24,6 +24,19 @@ public class LogButtons : MonoBehaviour
     {
         // Escribe tu código aquí:
         Debug.LogError("Este es un mensaje de error.");
+        PausarJuego(); 
+    }
+        // Métodos de pausa/reanudación
+    public void PausarJuego()
+    {
+        Time.timeScale = 0f; // pausa el juego
+        Debug.Log("Juego pausado");
+    }
+
+    public void ReanudarJuego()
+    {
+        Time.timeScale = 1f; // reanuda el juego
+        Debug.Log("Juego reanudado");
     }
     
 }
